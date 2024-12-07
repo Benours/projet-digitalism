@@ -12,6 +12,8 @@ mycursor = mydb.cursor()
 
 # mycursor.execute("CREATE DATABASE data_france")
 
+# mycursor.execute("DROP DATABASE data_france")
+
 # mycursor.execute("SHOW DATABASES")
 
 # for x in mycursor:
@@ -26,9 +28,9 @@ mycursor = mydb.cursor()
 # for x in mycursor:
 #   print(x)
 
-# mycursor.execute("SELECT * FROM villes")
+mycursor.execute("SELECT * FROM villes")
 
-# myresult = mycursor.fetchall()
+myresult = mycursor.fetchall()
 
-# for x in myresult:
-#   print(x)
+for x in myresult:
+  print(x)
