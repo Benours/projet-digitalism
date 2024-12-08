@@ -25,8 +25,13 @@ mycursor = mydb.cursor()
 villes_de_france = set()
 
 with open('data/20230823-communes-departement-region.csv', newline='', encoding='utf-8') as csvfile:
+
+    # Skip la première ligne
     next(csvfile)
+
+    # Initialisation du reader
     reader = csv.reader(csvfile, delimiter=',')
+    
     for row in reader:
 
         # Extraction des données du csv
